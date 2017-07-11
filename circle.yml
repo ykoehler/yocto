@@ -14,5 +14,7 @@ checkout:
 compile:
   override:
     - source ~/yocto/poky/oe-init-build-env
+    - set
+    - pwd
     - bitbake core-image-minimal
 
