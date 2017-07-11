@@ -2,7 +2,8 @@ machine:
   timezone:
     America/New_York
   pre:
-    - curl -L -o repo https://storage.googleapis.com/git-repo-downloads/repo
+    - curl -L -o ./repo https://storage.googleapis.com/git-repo-downloads/repo
+    - chmod +x ./repo
 checkout:
   post:
     - ./repo init -u https://github.com/ykoehler/yocto.git
