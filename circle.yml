@@ -7,7 +7,7 @@ machine:
     - git config --global user.email "yannick@koehler.name"
     - git config --global user.name "Yannick Koehler"
     - git config --global color.ui true
-    - yum install diffstat makeinfo chrpath
+    - sudo apt-get install diffstat makeinfo chrpath -y
 checkout:
   post:
     - ~/repo init -u https://github.com/ykoehler/yocto.git
