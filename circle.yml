@@ -4,6 +4,8 @@ machine:
   pre:
     - curl -L -o ~/repo https://storage.googleapis.com/git-repo-downloads/repo
     - chmod +x ~/repo
+    - git config --global user.email "yannick@koehler.name"
+    - git config --global user.name "Yannick Koehler"
 checkout:
   post:
     - ~/repo init -u https://github.com/ykoehler/yocto.git
