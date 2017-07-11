@@ -6,6 +6,7 @@ machine:
     - chmod +x ~/repo
     - git config --global user.email "yannick@koehler.name"
     - git config --global user.name "Yannick Koehler"
+    - git config --global color.ui true
 checkout:
   post:
     - ~/repo init -u https://github.com/ykoehler/yocto.git
