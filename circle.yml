@@ -1,0 +1,13 @@
+machine:
+  timezone:
+    America/New_York
+  pre:
+    - curl -L -o repo https://storage.googleapis.com/git-repo-downloads/repo
+checkout:
+  post:
+    - repo init -u https://github.com/ykoehler/yocto.git
+    - repo sync
+compile:
+  override:
+    - poky/scripts/bitbake core-image-minimal
+
