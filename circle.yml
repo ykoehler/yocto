@@ -4,8 +4,12 @@ machine:
   pre:
     - curl -L -o ./repo https://storage.googleapis.com/git-repo-downloads/repo
     - chmod +x ./repo
+    - ls -l
+    - pwd
 checkout:
   post:
+    - pwd
+    - ls -l
     - ./repo init -u https://github.com/ykoehler/yocto.git
     - ./repo sync
 compile:
